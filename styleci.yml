@@ -1,0 +1,15 @@
+risky: false
+
+preset: recommended
+
+version: 8.0
+
+tab-width: 4
+
+use-tabs: false
+
+finder:
+  exclude:
+    - "tests"
+  name:
+    - "*.php"
