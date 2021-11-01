@@ -16,6 +16,7 @@ class LinearSearch implements SearchInterface
                 return $item;
             }
         }
+
         return false;
     }
 }

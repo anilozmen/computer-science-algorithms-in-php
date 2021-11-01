@@ -12,7 +12,6 @@ trait SortTrait
      *
      * @return array
      */
-
     public function cleanTheArrayData(array $data): array
     {
         $array = [];
@@ -20,8 +19,9 @@ trait SortTrait
             if (!is_numeric($datum)) {
                 continue;
             }
-            $array[$key] = (int)trim($datum);
+            $array[$key] = (int) trim($datum);
         }
+
         return array_values($array);
     }
 }

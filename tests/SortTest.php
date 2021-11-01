@@ -2,12 +2,12 @@
 
 namespace Tests;
 
+use CS\Sort;
 use CS\Sort\BubbleSort;
 use CS\Sort\InsertionSort;
 use CS\Sort\MergeSort;
 use CS\Sort\QuickSort;
 use CS\Sort\RadixSort;
-use CS\Sort;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 
@@ -82,7 +82,6 @@ class SortTest extends TestCase
 
     /**
      * @testdox Radix Sort
-     *
      */
     public function testRadixSort()
     {
@@ -108,6 +107,7 @@ class SortTest extends TestCase
         $reflection = new ReflectionClass($object);
         $method = $reflection->getMethod($methodName);
         $method->setAccessible(true);
+
         return $method->invokeArgs($object, $args);
     }
 }
