@@ -12,7 +12,7 @@ class BinarySearch implements SearchInterface
         $max = count($input) - 1;
 
         while ($min <= $max) {
-            $index = (int)ceil(($max + $min) / 2);
+            $index = (int) ceil(($max + $min) / 2);
             $element = $input[$index];
 
             if ($element['id'] < $id) {

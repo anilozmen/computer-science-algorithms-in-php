@@ -21,7 +21,7 @@ class RadixSort implements SortInterface
         $longest = max(array_map('strlen', $input));
 
         // Make an array of 10 empty arrays.
-        $buckets = array_fill(0, 10, array());
+        $buckets = array_fill(0, 10, []);
 
         for ($i = $longest - 1; $i >= 0; $i--) {
             while (isset($input) && $input) {
@@ -42,8 +42,9 @@ class RadixSort implements SortInterface
 
     protected function getMaximumNumberOfDigit(int $number, int $place, int $longestNumber): int
     {
-        $numberToArray = str_split((string)$number);
+        $numberToArray = str_split((string) $number);
         $mod = $longestNumber - count($numberToArray);
-        return (int)($numberToArray[$place - $mod] ?? '0');
+
+        return (int) ($numberToArray[$place - $mod] ?? '0');
     }
 }

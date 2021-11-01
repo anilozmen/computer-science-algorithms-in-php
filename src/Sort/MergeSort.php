@@ -22,7 +22,7 @@ class MergeSort implements SortInterface
         }
 
         // Break into two smaller arrays
-        $middle = (int)ceil(count($input) / 2);
+        $middle = (int) ceil(count($input) / 2);
         $leftArray = array_slice($input, 0, $middle);
         $rightArray = array_slice($input, $middle);
 
@@ -34,8 +34,9 @@ class MergeSort implements SortInterface
     }
 
     /**
-     * @param  array $leftArray
-     * @param  array $rightArray
+     * @param array $leftArray
+     * @param array $rightArray
+     *
      * @return array
      */
     protected function merge(array $leftArray, array $rightArray): array

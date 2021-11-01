@@ -16,7 +16,6 @@ class InsertionSort implements SortInterface
     {
         $input = $this->cleanTheArrayData($input);
 
-
         for ($i = 1; $i < count($input); $i++) {
             $temp = $input[$i];
             for ($j = $i; $j > 0; $j--) {
